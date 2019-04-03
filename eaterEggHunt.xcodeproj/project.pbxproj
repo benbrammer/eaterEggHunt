@@ -12,6 +12,7 @@
 		61DCE7E32247D7F400011CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DCE7E12247D7F400011CB6 /* Main.storyboard */; };
 		61DCE7E52247D7F500011CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DCE7E42247D7F500011CB6 /* Assets.xcassets */; };
 		61DCE7E82247D7F500011CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DCE7E62247D7F500011CB6 /* LaunchScreen.storyboard */; };
+		61DCE7F02247D82100011CB6 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DCE7EF2247D82100011CB6 /* locationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		61DCE7E42247D7F500011CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61DCE7E72247D7F500011CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61DCE7E92247D7F500011CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61DCE7EF2247D82100011CB6 /* locationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				61DCE7DD2247D7F400011CB6 /* AppDelegate.swift */,
 				61DCE7DF2247D7F400011CB6 /* ViewController.swift */,
+				61DCE7EF2247D82100011CB6 /* locationManager.swift */,
 				61DCE7E12247D7F400011CB6 /* Main.storyboard */,
 				61DCE7E42247D7F500011CB6 /* Assets.xcassets */,
 				61DCE7E62247D7F500011CB6 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				61DCE7E02247D7F400011CB6 /* ViewController.swift in Sources */,
 				61DCE7DE2247D7F400011CB6 /* AppDelegate.swift in Sources */,
+				61DCE7F02247D82100011CB6 /* locationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
