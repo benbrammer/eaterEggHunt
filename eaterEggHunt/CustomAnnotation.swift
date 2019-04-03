@@ -6,7 +6,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
     var locationLabel: String?
-//    var filmLabel: String?
     var locationDescription: String?
 //    var imageName: String?
     
@@ -22,7 +21,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
         self.locationLabel = locationLabel
         self.coordinate = coordinate
         self.locationDescription = locationDescription
-//        self.filmLabel = filmLabel
     }
     
 }
