@@ -16,7 +16,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
         return locationLabel
     }
     
-    //All variables kept here for the Location View Controller
+    //All variables kept here for the Location View Controller & Custom Annotation
     
     init(locationLabel: String, coordinate: CLLocationCoordinate2D, locationDescription: String) {
         self.locationLabel = locationLabel

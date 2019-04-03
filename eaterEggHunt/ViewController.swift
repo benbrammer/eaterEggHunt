@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: "marker")
+        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: "marker")
         
         
         
