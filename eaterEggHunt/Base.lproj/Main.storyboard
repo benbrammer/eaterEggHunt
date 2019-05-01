@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eaterEggHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-jJ-wSz">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-jJ-wSz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PsI-jJ-wSz" secondAttribute="bottom" id="MEH-Fl-gEh"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XyW-OK-55C"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qyK-cE-E0R"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sQ6-kX-LRG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -32,23 +37,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.80000000000001" y="25.862068965517242"/>
         </scene>
         <!--Camera View-->
         <scene sceneID="k64-jX-aOE">
             <objects>
                 <viewController id="etZ-7h-Evk" customClass="cameraView" customModule="eaterEggHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ukz-mq-uXU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-bW-u3v">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip5-hR-H3E">
-                                <rect key="frame" x="133" y="546" width="108" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip5-hR-H3E">
+                                <rect key="frame" x="127" y="668" width="120" height="110"/>
                                 <state key="normal" title="Button" image="Cam"/>
                                 <connections>
                                     <action selector="takePic:" destination="etZ-7h-Evk" eventType="touchUpInside" id="DSc-O5-jD5"/>
@@ -56,6 +60,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ip5-hR-H3E" firstAttribute="leading" secondItem="91P-VJ-nUO" secondAttribute="leading" constant="127" id="7vI-ly-T8l"/>
+                            <constraint firstItem="Ip5-hR-H3E" firstAttribute="bottom" secondItem="91P-VJ-nUO" secondAttribute="bottom" id="H4K-yY-qlr"/>
+                            <constraint firstItem="91P-VJ-nUO" firstAttribute="trailing" secondItem="Ip5-hR-H3E" secondAttribute="trailing" constant="128" id="Hzx-P3-UFx"/>
+                            <constraint firstItem="Ip5-hR-H3E" firstAttribute="top" secondItem="91P-VJ-nUO" secondAttribute="top" constant="624" id="unX-Eq-bHH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="91P-VJ-nUO"/>
                     </view>
                     <connections>
@@ -64,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJp-Et-Zkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="26.53673163418291"/>
+            <point key="canvasLocation" x="892" y="25.862068965517242"/>
         </scene>
     </scenes>
     <resources>
