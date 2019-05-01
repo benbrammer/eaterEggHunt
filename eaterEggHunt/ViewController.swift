@@ -15,36 +15,36 @@ class ViewController: UIViewController {
         //London
         
         let lonOne = CLLocationCoordinate2D(latitude: 51.500717, longitude: -0.124630)
-        let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "")
+        let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London and is usually extended to refer to both the clock and the clock tower. The tower stands at 96 metres tall. Opened: 31 May 1859")
 //        annotationOne.imageName = "Big Ben"
         mapView.addAnnotation(annotationOne)
         
         let lonTwo = CLLocationCoordinate2D(latitude: 51.503224, longitude: -0.119414)
-        let annotationTwo = CustomAnnotation(locationLabel: "London Eye", coordinate: lonTwo, locationDescription: "")
+        let annotationTwo = CustomAnnotation(locationLabel: "London Eye", coordinate: lonTwo, locationDescription: "The London Eye (or The Coca Cola London Eye) is a cantilevered observation wheel on the South Bank of the River Thames in London. It is Europe's tallest cantilevered observation wheel, is the most popular paid tourist attraction in the United Kingdom with over 3.75 million visitors annually, and has made many appearances in popular culture. Construction was started in 1998 and stands at 135 metres tall.")
 //        annotationOne.imageName = "London Eye"
         mapView.addAnnotation(annotationTwo)
         
         let lonThree = CLLocationCoordinate2D(latitude: 51.518711, longitude: -0.126124)
-        let annotationThree = CustomAnnotation(locationLabel: "The British Museum", coordinate: lonThree, locationDescription: "")
+        let annotationThree = CustomAnnotation(locationLabel: "The British Museum", coordinate: lonThree, locationDescription: "Founded in 1753, The British Museum, in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely sourced during the era of the British Empire.")
 //        annotationOne.imageName = "The British Museum"
         mapView.addAnnotation(annotationThree)
 
         
         let lonFour = CLLocationCoordinate2D(latitude: 51.502067, longitude: -0.140082)
-        let annotationFour = CustomAnnotation(locationLabel: "Buckingham Palace", coordinate: lonFour, locationDescription: "")
+        let annotationFour = CustomAnnotation(locationLabel: "Buckingham Palace", coordinate: lonFour, locationDescription: "Buckingham Palace is the London residence and administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality. It has been a focal point for the British people at times of national rejoicing and mourning. Opened in 1703.")
 //        annotationOne.imageName = "Buckingham Palace"
         mapView.addAnnotation(annotationFour)
 
         
         let lonFive = CLLocationCoordinate2D(latitude: 51.513702, longitude: -0.099764)
-        let annotationFive = CustomAnnotation(locationLabel: "St Paul's Cathedral", coordinate: lonFive, locationDescription: "")
+        let annotationFive = CustomAnnotation(locationLabel: "St Paul's Cathedral", coordinate: lonFive, locationDescription: "St Paul's Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London. It sits on Ludgate Hill at the highest point of the City of London and is a Grade I listed building. Construction originally started in June 1675.")
 //        annotationOne.imageName = "St Paul's Cathedral"
         mapView.addAnnotation(annotationFive)
 
         
         let lonSix = CLLocationCoordinate2D(latitude: 51.510055, longitude: -0.134896)
-        let annotationSix = CustomAnnotation(locationLabel: "Picadilly Circus", coordinate: lonSix, locationDescription: "")
-//        annotationOne.imageName = "Picadilly Circus"
+        let annotationSix = CustomAnnotation(locationLabel: "Piccadilly Circus", coordinate: lonSix, locationDescription: "Opened in 1819, Piccadilly Circus is a road junction and public space of London's West End in the City of Westminster. It was built in 1819 to connect Regent Street with Piccadilly. In this context, a circus, from the Latin word meaning 'circle', is a round open space at a street junction.")
+//        annotationOne.imageName = "Piccadilly Circus"
         mapView.addAnnotation(annotationSix)
 
 
@@ -124,8 +124,6 @@ class ViewController: UIViewController {
 //        annotationOne.imageName = "Union Station"
         mapView.addAnnotation(annotationEighteen)
         
-        
-        //test
     }
 
 
