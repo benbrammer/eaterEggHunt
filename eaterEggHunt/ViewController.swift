@@ -52,37 +52,37 @@ class ViewController: UIViewController {
         //New York (Manhattan Island)
         
         let nyOne = CLLocationCoordinate2D(latitude: 40.748151, longitude: -73.985736)
-        let annotationSeven = CustomAnnotation(locationLabel: "Empire State Building", coordinate: nyOne, locationDescription: "")
+        let annotationSeven = CustomAnnotation(locationLabel: "Empire State Building", coordinate: nyOne, locationDescription: "The Empire State Building is a 102-story Art Deco skyscraper in Midtown Manhattan, New York City. Designed by Shreve, Lamb & Harmon and completed in 1931, the building has a roof height of 1,250 feet and stands a total of 1,454 feet tall, including its antenna.")
 //        annotationOne.imageName = "Empire State Building"
         mapView.addAnnotation(annotationSeven)
 
 
         let nyTwo = CLLocationCoordinate2D(latitude: 40.751701, longitude: -73.975817)
-        let annotationEight = CustomAnnotation(locationLabel: "Chrysler Building", coordinate: nyTwo, locationDescription: "")
+        let annotationEight = CustomAnnotation(locationLabel: "Chrysler Building", coordinate: nyTwo, locationDescription: "The Chrysler Building is an Art Deco–style skyscraper located in the Turtle Bay neighbourhood on the East Side of Midtown Manhattan, New York City, at the intersection of 42nd Street and Lexington Avenue.")
 //        annotationOne.imageName = "Chrysler Building"
         mapView.addAnnotation(annotationEight)
 
         
         let nyThree = CLLocationCoordinate2D(latitude: 40.759071, longitude: -73.985007)
-        let annotationNine = CustomAnnotation(locationLabel: "Times Square", coordinate: nyThree, locationDescription: "")
+        let annotationNine = CustomAnnotation(locationLabel: "Times Square", coordinate: nyThree, locationDescription: "Times Square is a major commercial intersection, tourist destination, entertainment centre and neighbourhood in the Midtown Manhattan section of New York City at the junction of Broadway and Seventh Avenue. It stretches from West 42nd to West 47th Streets.")
 //        annotationOne.imageName = "Times Square"
         mapView.addAnnotation(annotationNine)
 
 
         let nyFour = CLLocationCoordinate2D(latitude: 40.769785, longitude: -73.974567)
-        let annotationTen = CustomAnnotation(locationLabel: "Central Park", coordinate: nyFour, locationDescription: "")
+        let annotationTen = CustomAnnotation(locationLabel: "Central Park", coordinate: nyFour, locationDescription: "Central Park is an urban park in Manhattan, New York City. It is located between the Upper West Side and Upper East Side, roughly bounded by Fifth Avenue on the east, Central Park West on the west, Central Park South on the south, and Central Park North on the north.")
 //        annotationOne.imageName = "Central Park"
         mapView.addAnnotation(annotationTen)
 
 
         let nyFive = CLLocationCoordinate2D(latitude: 40.760099, longitude: -73.980225)
-        let annotationEleven = CustomAnnotation(locationLabel: "Radio City Music Hall", coordinate: nyFive, locationDescription: "")
+        let annotationEleven = CustomAnnotation(locationLabel: "Radio City Music Hall", coordinate: nyFive, locationDescription: "Radio City Music Hall is an entertainment venue at 1260 Avenue of the Americas, within Rockefeller Center, in Midtown Manhattan, New York City. Nicknamed the Showplace of the Nation, it is the headquarters for the Rockettes, the precision dance company.")
 //        annotationOne.imageName = "Radio City Music Hall"
         mapView.addAnnotation(annotationEleven)
 
 
         let nySix = CLLocationCoordinate2D(latitude: 40.765244, longitude: -73.980162)
-        let annotationTwelve = CustomAnnotation(locationLabel: "Carnegie Hall", coordinate: nySix, locationDescription: "")
+        let annotationTwelve = CustomAnnotation(locationLabel: "Carnegie Hall", coordinate: nySix, locationDescription: "Carnegie Hall is a concert venue in Midtown Manhattan in New York City, United States, located at 881 Seventh Avenue, occupying the east side of Seventh Avenue between West 56th Street and West 57th Street, two blocks south of Central Park. Opened: April 1891")
 //        annotationOne.imageName = "Carnegie Hall"
         mapView.addAnnotation(annotationTwelve)
         
@@ -91,36 +91,36 @@ class ViewController: UIViewController {
         //Los Angeles
         
         let laOne = CLLocationCoordinate2D(latitude: 34.101648, longitude: -118.340583)
-        let annotationThirteen = CustomAnnotation(locationLabel: "Walk of Fame", coordinate: laOne, locationDescription: "")
+        let annotationThirteen = CustomAnnotation(locationLabel: "Walk of Fame", coordinate: laOne, locationDescription: "The Hollywood Walk of Fame comprises more than 2,600 five-pointed terrazzo and brass stars embedded in the sidewalks along 15 blocks of Hollywood Boulevard and three blocks of Vine Street in Hollywood, California. Established in 1958.")
 //        annotationOne.imageName = "Walk of Fame"
         mapView.addAnnotation(annotationThirteen)
         
         let laTwo = CLLocationCoordinate2D(latitude: 34.103206, longitude: -118.326460)
-        let annotationFourteen = CustomAnnotation(locationLabel: "Capitol Records Building", coordinate: laTwo, locationDescription: "")
+        let annotationFourteen = CustomAnnotation(locationLabel: "Capitol Records Building", coordinate: laTwo, locationDescription: "The Capitol Records Building, also known as the Capitol Records Tower, is a Hollywood Boulevard Commercial and Entertainment District building that is located in Hollywood, Los Angeles. The building is a thirteen-story tower that was designed by Louis Naidorf, and is one of the city's landmarks. Opened in 1955.")
 //        annotationOne.imageName = "Capitol Records Building"
 //        mapView.addAnnotation(annotationFourteen)
         
         
         let laThree = CLLocationCoordinate2D(latitude: 34.010018, longitude: -118.495811)
-        let annotationFifteen = CustomAnnotation(locationLabel: "Santa Monica Pier", coordinate: laThree, locationDescription: "")
+        let annotationFifteen = CustomAnnotation(locationLabel: "Santa Monica Pier", coordinate: laThree, locationDescription: "The Santa Monica Pier is a large double-jointed pier at the foot of Colorado Avenue in Santa Monica, California that is over 100 years old. Opened: 9 September 1909")
 //        annotationOne.imageName = "Santa Monica Pier"
         mapView.addAnnotation(annotationFifteen)
         
         
         let laFour = CLLocationCoordinate2D(latitude: 34.055320, longitude: -118.249797)
-        let annotationSixteen = CustomAnnotation(locationLabel: "Disney Concert Hall", coordinate: laFour, locationDescription: "")
+        let annotationSixteen = CustomAnnotation(locationLabel: "Disney Concert Hall", coordinate: laFour, locationDescription: "The Walt Disney Concert Hall at 111 South Grand Avenue in downtown Los Angeles, California, is the fourth hall of the Los Angeles Music Center and was designed by Frank Gehry. It opened on October 24, 2003.")
 //        annotationOne.imageName = "Disney Concert Hall"
         mapView.addAnnotation(annotationSixteen)
         
         
         let laFive = CLLocationCoordinate2D(latitude: 34.118509, longitude: -118.300401)
-        let annotationSeventeen = CustomAnnotation(locationLabel: "Griffith Observatory", coordinate: laFive, locationDescription: "")
+        let annotationSeventeen = CustomAnnotation(locationLabel: "Griffith Observatory", coordinate: laFive, locationDescription: "The Griffith Observatory is a facility in Los Angeles, California, sitting on the south-facing slope of Mount Hollywood in Los Angeles' Griffith Park. The art-deco building commands a view of the Los Angeles Basin, including Downtown Los Angeles to the southeast, Hollywood to the south, and the Pacific Ocean to the southwest. The observatory served as the setting for the climactic scene in the James Dean classic ‘Rebel Without A Cause’.")
 //        annotationOne.imageName = "Griffith Observatory"
         mapView.addAnnotation(annotationSeventeen)
         
         
         let laSix = CLLocationCoordinate2D(latitude: 34.056274, longitude: -118.236780)
-        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "")
+        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.")
 //        annotationOne.imageName = "Union Station"
         mapView.addAnnotation(annotationEighteen)
         
