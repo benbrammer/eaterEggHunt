@@ -14,10 +14,13 @@
 		61DCE7E82247D7F500011CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DCE7E62247D7F500011CB6 /* LaunchScreen.storyboard */; };
 		61E6FB3D2254D186005A6C81 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */; };
 		61E6FB3F2254D22F005A6C81 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6FB3E2254D22F005A6C81 /* CustomAnnotationView.swift */; };
+		7CF017951CC5BF22C2253005 /* Pods_eaterEggHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C97726105DA32AB4FBDEE6E /* Pods_eaterEggHunt.framework */; };
 		9E8B822D2279A750001E5BE6 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B822C2279A750001E5BE6 /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EF17E91BFB20634BB9DD56A /* Pods-eaterEggHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eaterEggHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-eaterEggHunt/Pods-eaterEggHunt.release.xcconfig"; sourceTree = "<group>"; };
+		5C97726105DA32AB4FBDEE6E /* Pods_eaterEggHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eaterEggHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DCE7DA2247D7F400011CB6 /* eaterEggHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eaterEggHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DCE7DD2247D7F400011CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DCE7DF2247D7F400011CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		61DCE7E92247D7F500011CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		61E6FB3E2254D22F005A6C81 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		6D0E057592B8185BB60E6874 /* Pods-eaterEggHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eaterEggHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eaterEggHunt/Pods-eaterEggHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		9E8B822C2279A750001E5BE6 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF017951CC5BF22C2253005 /* Pods_eaterEggHunt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		337206CB665080E5F6EA53FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C97726105DA32AB4FBDEE6E /* Pods_eaterEggHunt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61DCE7D12247D7F400011CB6 = {
 			isa = PBXGroup;
 			children = (
 				61DCE7DC2247D7F400011CB6 /* eaterEggHunt */,
 				61DCE7DB2247D7F400011CB6 /* Products */,
+				874D69848C85150D31A34071 /* Pods */,
+				337206CB665080E5F6EA53FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,15 @@
 			path = eaterEggHunt;
 			sourceTree = "<group>";
 		};
+		874D69848C85150D31A34071 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D0E057592B8185BB60E6874 /* Pods-eaterEggHunt.debug.xcconfig */,
+				0EF17E91BFB20634BB9DD56A /* Pods-eaterEggHunt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DCE7EC2247D7F500011CB6 /* Build configuration list for PBXNativeTarget "eaterEggHunt" */;
 			buildPhases = (
+				E05B0D99A46A6F6CFBA178D2 /* [CP] Check Pods Manifest.lock */,
 				61DCE7D62247D7F400011CB6 /* Sources */,
 				61DCE7D72247D7F400011CB6 /* Frameworks */,
 				61DCE7D82247D7F400011CB6 /* Resources */,
+				7001AD39D02AD5F81B1F211F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +164,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7001AD39D02AD5F81B1F211F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eaterEggHunt/Pods-eaterEggHunt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eaterEggHunt/Pods-eaterEggHunt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05B0D99A46A6F6CFBA178D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eaterEggHunt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61DCE7D62247D7F400011CB6 /* Sources */ = {
@@ -292,6 +377,7 @@
 		};
 		61DCE7ED2247D7F500011CB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D0E057592B8185BB60E6874 /* Pods-eaterEggHunt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +395,7 @@
 		};
 		61DCE7EE2247D7F500011CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF17E91BFB20634BB9DD56A /* Pods-eaterEggHunt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
