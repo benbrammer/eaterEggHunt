@@ -19,7 +19,6 @@ class CustomAnnotationView: MKMarkerAnnotationView {
                 
                 if annotationView == nil {
                     annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-                    annotationView!.canShowCallout = true
                 }
                 else {
                     annotationView!.annotation = annotation
