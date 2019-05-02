@@ -3,6 +3,7 @@
 import UIKit
 
 var imagePicker: UIImagePickerController!
+
 class cameraView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var takenPic: UIImageView!
@@ -23,3 +24,5 @@ class cameraView: UIViewController, UINavigationControllerDelegate, UIImagePicke
         self.view.bringSubviewToFront(takenPic)
 }
 }
+
+
