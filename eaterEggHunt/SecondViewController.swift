@@ -28,15 +28,15 @@ func openUrl(urlStr:String!) {
     
 }
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    print(annotation.locationLabel!)
-    locationInfo.numberOfLines = 0
-    //If you set the number of lines to 0, it will allow for as many lines as needed - a text box would probably be better instead of using a label - but serves the same function for this.
-    locationLabel.text = CustomAnnotation.locationLabel!
-    imageView.image = UIImage(named: annotation.locationLabel!)
-//    filmLabel.text = annotation.filmLabel
-    locationDescription.text = annotation.locationDescription!
-}
-
-
+//override func viewDidLoad() {
+//    super.viewDidLoad()
+//    print(annotation.locationLabel!)
+//    locationInfo.numberOfLines = 0
+//    //If you set the number of lines to 0, it will allow for as many lines as needed - a text box would probably be better instead of using a label - but serves the same function for this.
+//    locationLabel.text = CustomAnnotation.locationLabel!
+//    imageView.image = UIImage(named: annotation.locationLabel!)
+////    filmLabel.text = annotation.filmLabel
+//    locationDescription.text = annotation.locationDescription!
+//}
+//
+//
