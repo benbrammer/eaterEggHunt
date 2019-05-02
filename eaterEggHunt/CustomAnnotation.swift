@@ -10,7 +10,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
 //    var imageName: String?
     
     var color: UIColor!
-    
+    var image: UIImage!
     var title: String? {
         return locationLabel
     }
@@ -23,4 +23,5 @@ class CustomAnnotation: NSObject, MKAnnotation {
         self.locationDescription = locationDescription
     }
     
+
 }

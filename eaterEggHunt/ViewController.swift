@@ -4,20 +4,17 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: "marker")
         
         
         
         //London
-        
         let lonOne = CLLocationCoordinate2D(latitude: 51.500717, longitude: -0.124630)
         let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London and is usually extended to refer to both the clock and the clock tower. The tower stands at 96 metres tall. Opened: 31 May 1859")
 //        annotationOne.imageName = "Big Ben"
-        mapView.addAnnotation(annotationOne)
+        self.mapView.addAnnotation(annotationOne)
         
         let lonTwo = CLLocationCoordinate2D(latitude: 51.503224, longitude: -0.119414)
         let annotationTwo = CustomAnnotation(locationLabel: "London Eye", coordinate: lonTwo, locationDescription: "The London Eye (or The Coca Cola London Eye) is a cantilevered observation wheel on the South Bank of the River Thames in London. It is Europe's tallest cantilevered observation wheel, is the most popular paid tourist attraction in the United Kingdom with over 3.75 million visitors annually, and has made many appearances in popular culture. Construction was started in 1998 and stands at 135 metres tall.")
