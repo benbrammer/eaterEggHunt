@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         let lonThree = CLLocationCoordinate2D(latitude: 51.518711, longitude: -0.126124)
         let annotationThree = CustomAnnotation(locationLabel: "The British Museum", coordinate: lonThree, locationDescription: "Founded in 1753, The British Museum, in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely sourced during the era of the British Empire.")
-//        annotationOne.imageName = "The British Museum"
+//        annotationOne.imageName = "British Museum"
         mapView.addAnnotation(annotationThree)
 
         
