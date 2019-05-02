@@ -118,9 +118,10 @@ class ViewController: UIViewController {
 
         
         let laSix = CLLocationCoordinate2D(latitude: 34.056274, longitude: -118.236780)
-        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.")
-//        annotationOne.imageName = "Union Station"
+        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.", imageName: "Union Station", ticketsButton: <#String#>)
+        annotationOne.imageName = "Union Station"
         mapView.addAnnotation(annotationEighteen)
+
         
     }
     
@@ -142,14 +143,7 @@ class ViewController: UIViewController {
     }
 
 
-        let laSix = CLLocationCoordinate2D(latitude: 34.056274, longitude: -118.236780)
-        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.", imageName: "Union Station", ticketsButton: <#String#>)
-        annotationOne.imageName = "Union Station"
-        mapView.addAnnotation(annotationEighteen)
-
+        
    }
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 8b04a7eca3fbdd0febb14cbe2fcefbd91a500d83
+
