@@ -3,6 +3,7 @@
 import UIKit
 
 var imagePicker: UIImagePickerController!
+
 class cameraView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var takenPic: UIImageView!
