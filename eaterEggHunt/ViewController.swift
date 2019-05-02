@@ -116,11 +116,57 @@ class ViewController: UIViewController {
         annotationOne.imageName = "Griffith Observatory"
         mapView.addAnnotation(annotationSeventeen)
 
-
+        
         let laSix = CLLocationCoordinate2D(latitude: 34.056274, longitude: -118.236780)
         let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.", imageName: "Union Station", ticketsButton: <#String#>)
         annotationOne.imageName = "Union Station"
         mapView.addAnnotation(annotationEighteen)
 
+        
+    }
+    
+    
+    
+    //pinAnnotation
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? CustomAnnotation else { return nil }
+        let identifier = "marker"
+        var view: CustomAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? CustomAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+            view.tintColor = annotation.color
+        } else {
+            view = CustomAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            
+        }
+        let pinImage = UIImage(named: "egg.png")
+        annotationView!.image = pinImage
+        return annotationView
+    }
+
+
+<<<<<<< HEAD
+    
+    
+    
+    
+    
+    
+        let laSix = CLLocationCoordinate2D(latitude: 34.056274, longitude: -118.236780)
+        let annotationEighteen = CustomAnnotation(locationLabel: "Union Station", coordinate: laSix, locationDescription: "Opulent train station built in 1939 & still a major rail hub, with shops, eateries & waiting areas. The site of Union Station is on the original location of Los Angeles' Chinatown, which was moved to make way for the station.", imageName: "Union Station", ticketsButton: <#String#>)
+        annotationOne.imageName = "Union Station"
+        mapView.addAnnotation(annotationEighteen)
+
+=======
+        
+>>>>>>> 05844d9c57a42629ef665e6a7909f86970994444
    }
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 19d5b0b60f527ef56a5ba9765120703deb1131df
