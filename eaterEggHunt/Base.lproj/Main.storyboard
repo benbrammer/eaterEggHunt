@@ -108,6 +108,8 @@
                     </view>
                     <connections>
                         <outlet property="eggImage" destination="2bC-1t-DrQ" id="nhH-EX-zrB"/>
+                        <outlet property="linkWebiste" destination="UDY-CR-JZ0" id="w3w-6F-P6Z"/>
+                        <outlet property="locationDescription" destination="gDs-JT-atE" id="L6M-VM-x4N"/>
                         <outlet property="locationImage" destination="JOA-xU-55J" id="BTu-Sg-p3O"/>
                         <outlet property="locationInfo" destination="gDs-JT-atE" id="7e6-vr-kBQ"/>
                         <outlet property="ticketsButton" destination="UDY-CR-JZ0" id="xXd-7g-zoe"/>
