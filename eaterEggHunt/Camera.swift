@@ -8,15 +8,12 @@ class cameraView: UIViewController, UINavigationControllerDelegate, UIImagePicke
     @IBOutlet weak var takenPic: UIImageView!
     
     //Brings up camera view when button is pressed
-
     @IBAction func takePic(_ sender: Any) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    
     
     // The ability to confirm image and set it in Image View
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
