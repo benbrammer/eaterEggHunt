@@ -29,6 +29,8 @@ func openUrl(urlStr:String!) {
     
 }
 
+    
+    
     @IBOutlet weak var takeImage: UIImageView!
     
     // Fuction to open camera when button is pressed
@@ -58,7 +60,7 @@ func openUrl(urlStr:String!) {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[.originalImage] as? UIImage else {
+        guard (info[.originalImage] as? UIImage) != nil else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         // Dismiss the picker.
@@ -91,4 +93,4 @@ func openUrl(urlStr:String!) {
 //}
 //
 //
-}
+
