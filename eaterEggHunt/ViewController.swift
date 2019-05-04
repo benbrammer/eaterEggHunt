@@ -6,6 +6,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    // Set up the initial location
     let initialLocation = CLLocation(latitude: 50.720806, longitude: -1.904755)
     let regionRadius: CLLocationDistance = 3000
     func centerMapOnLocation(location: CLLocation) {
@@ -23,13 +24,11 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
 
-
         
         //London
         let lonOne = CLLocationCoordinate2D(latitude: 51.500717, longitude: -0.124630)
         let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London and is usually extended to refer to both the clock and the clock tower. The tower stands at 96 metres tall. Opened: 31 May 1859", imageName: "Big Ben", ticketsButton: "https:www.getyourguide.com/big-ben-l2709/?utm_force=0")
         annotationOne.imageName = "Big Ben"
-
         mapView.addAnnotation(annotationOne)
 
         
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
         let annotationSix = CustomAnnotation(locationLabel: "Piccadilly Circus", coordinate: lonSix, locationDescription: "Opened in 1819, Piccadilly Circus is a road junction and public space of London's West End in the City of Westminster. It was built in 1819 to connect Regent Street with Piccadilly. In this context, a circus, from the Latin word meaning 'circle', is a round open space at a street junction.", imageName: "Piccadilly Circus", ticketsButton: <#String#>)
         annotationOne.imageName = "Piccadilly Circus"
         mapView.addAnnotation(annotationSix)
-
 
 
         //New York (Manhattan Island)
@@ -94,12 +92,10 @@ class ViewController: UIViewController {
         annotationOne.imageName = "Radio City Music Hall"
         mapView.addAnnotation(annotationEleven)
 
-
         let nySix = CLLocationCoordinate2D(latitude: 40.765244, longitude: -73.980162)
         let annotationTwelve = CustomAnnotation(locationLabel: "Carnegie Hall", coordinate: nySix, locationDescription: "Carnegie Hall is a concert venue in Midtown Manhattan in New York City, United States, located at 881 Seventh Avenue, occupying the east side of Seventh Avenue between West 56th Street and West 57th Street, two blocks south of Central Park. Opened: April 1891", imageName: "Carnegie Hall", ticketsButton: <#String#>)
         annotationOne.imageName = "Carnegie Hall"
         mapView.addAnnotation(annotationTwelve)
-
 
 
         //Los Angeles
@@ -141,30 +137,35 @@ class ViewController: UIViewController {
         
     }
     
-    
-    //pinAnnotation
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            return nil
-        }
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customAnnotation")
-        annotationView.image = UIImage(named:"egg.png" )
-        annotationView.canShowCallout = true
-        return annotationView
-        
-
-}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SecondViewController
         vc.annoations = sender as? CustomAnnotation }
-}
-
-extension ViewController: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let annotation = view.annotation as! CustomAnnotation
         performSegue(withIdentifier: "Next", sender: annotation)
     }
 }
+
+extension ViewController: MKMapViewDelegate {
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationView")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
+        }
+        
+        if let title = annotation.title, title == "Big Ben" {
+            annotationView?.image = UIImage(named: "Egg.png")
+            annotationView?.canShowCallout = true
+        
+        return annotationView
+    }
+}
+}
+
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion annotationOne: CLRegion) {
@@ -174,5 +175,6 @@ extension ViewController: CLLocationManagerDelegate {
         print("Left: \(annotationOne.identifier) AnnotationOne.")
     }
 }
+
 
 
