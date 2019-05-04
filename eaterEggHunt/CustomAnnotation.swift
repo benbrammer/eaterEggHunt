@@ -7,11 +7,13 @@ class CustomAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var locationLabel: String?
     var locationDescription: String?
-    var ticketsButton: String?
     var imageName: String?
+    var longitude: String?
+    var latitude: String?
     var color: UIColor!
     var annotationView: String?
     var image: UIImage!
+    var ticketsButton: String?
     var title: String? {
         return locationLabel
     }

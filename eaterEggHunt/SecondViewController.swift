@@ -19,7 +19,7 @@ override func viewDidLoad() {
 }
 
 @IBAction func linkWebsite(_ sender: UIButton) {
-    openUrl(urlStr: ViewController.ticketsButton)
+    openUrl(urlStr: CustomAnnotation.ticketsButton)
 }
 func openUrl(urlStr:String!) {
     if let url = NSURL(string:urlStr) {

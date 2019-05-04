@@ -81,12 +81,12 @@
 				61DCE7DF2247D7F400011CB6 /* ViewController.swift */,
 				61E6FB3E2254D22F005A6C81 /* CustomAnnotationView.swift */,
 				61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */,
+				9AD87ED1227ADB2700555315 /* SecondViewController.swift */,
 				61DCE7E12247D7F400011CB6 /* Main.storyboard */,
 				61DCE7E42247D7F500011CB6 /* Assets.xcassets */,
 				61DCE7E62247D7F500011CB6 /* LaunchScreen.storyboard */,
 				9E8B822C2279A750001E5BE6 /* Camera.swift */,
 				61DCE7E92247D7F500011CB6 /* Info.plist */,
-				9AD87ED1227ADB2700555315 /* SecondViewController.swift */,
 			);
 			path = eaterEggHunt;
 			sourceTree = "<group>";

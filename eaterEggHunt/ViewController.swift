@@ -2,18 +2,34 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
+    let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    let initialLocation = CLLocation(latitude: 50.720806, longitude: -1.904755)
+    let regionRadius: CLLocationDistance = 3000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true) }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: "marker")
         
-        
+        let initialLocation = CLLocation(latitude: 50.720806, longitude: -1.904755)
+        centerMapOnLocation(location: initialLocation)
+        // creating delegets for updating locations and managing location
+        mapView.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+
+
         
         //London
         let lonOne = CLLocationCoordinate2D(latitude: 51.500717, longitude: -0.124630)
         let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London and is usually extended to refer to both the clock and the clock tower. The tower stands at 96 metres tall. Opened: 31 May 1859", imageName: "Big Ben", ticketsButton: "https:www.getyourguide.com/big-ben-l2709/?utm_force=0")
         annotationOne.imageName = "Big Ben"
+
         mapView.addAnnotation(annotationOne)
 
         
@@ -128,23 +144,35 @@ class ViewController: UIViewController {
     
     //pinAnnotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? CustomAnnotation else { return nil }
-        let identifier = "marker"
-        var View: CustomAnnotationView
-        
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? CustomAnnotationView {
-            dequeuedView.annotation = annotation
-            View = dequeuedView
-            View.tintColor = annotation.color
-        } else {
-            view = CustomAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            
+        if annotation is MKUserLocation {
+            return nil
         }
-        let pinImage = UIImage(named: "egg.png")
-        annotationView!.image = pinImage
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customAnnotation")
+        annotationView.image = UIImage(named:"egg.png" )
+        annotationView.canShowCallout = true
         return annotationView
-    }
-
+        
 
 }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SecondViewController
+        vc.annoations = sender as? CustomAnnotation }
+}
+
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation as! CustomAnnotation
+        performSegue(withIdentifier: "Next", sender: annotation)
+    }
+}
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion annotationOne: CLRegion) {
+        print("Entered: \(annotationOne.identifier) AnnotationOne.")
+    }
+    func locationManager(_ manager: CLLocationManager, didExitRegion annotationOne: CLRegion) {
+        print("Left: \(annotationOne.identifier) AnnotationOne.")
+    }
+}
+
+

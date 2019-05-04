@@ -8,26 +8,7 @@ class CustomAnnotationView: MKMarkerAnnotationView {
             markerTintColor = custom.color
             
         
-            func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
-            {
-                if !(annotation is MKPointAnnotation) {
-                    return nil
-                }
-                
-                let annotationIdentifier = "AnnotationIdentifier"
-                var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-                
-                if annotationView == nil {
-                    annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-                }
-                else {
-                    annotationView!.annotation = annotation
-                }
-                
-                let pinImage = UIImage(named: "egg.png")
-                annotationView!.image = pinImage
-                return annotationView
-            }
+
     
 }
 }
