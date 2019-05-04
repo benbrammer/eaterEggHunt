@@ -130,13 +130,13 @@ class ViewController: UIViewController {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? CustomAnnotation else { return nil }
         let identifier = "marker"
-        var view: CustomAnnotationView
+        var View: CustomAnnotationView
         
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? CustomAnnotationView {
             dequeuedView.annotation = annotation
-            view = dequeuedView
-            view.tintColor = annotation.color
+            View = dequeuedView
+            View.tintColor = annotation.color
         } else {
             view = CustomAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             

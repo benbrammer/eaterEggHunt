@@ -10,6 +10,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
     var ticketsButton: String?
     var imageName: String?
     var color: UIColor!
+    var annotationView: String?
     var image: UIImage!
     var title: String? {
         return locationLabel
