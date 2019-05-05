@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import Firebase
 
 class ViewController: UIViewController {
     let locationManager = CLLocationManager()
@@ -225,6 +226,15 @@ extension ViewController: CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didExitRegion annotationOne: CLRegion) {
         print("Left: \(annotationOne.identifier) AnnotationOne.")
+        
+        loadLocations()
+    }
+    
+    func loadLocations() {
+        let ref = Firestore.firestore().collection("locations")
+        ref.getDocuments { snapshot, error in
+            print(snapshot?.documents)
+        }
     }
 }
 
