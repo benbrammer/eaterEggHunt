@@ -4,11 +4,12 @@ import MapKit
 class ViewController: UIViewController {
     let locationManager = CLLocationManager()
 
+
     @IBOutlet weak var mapView: MKMapView!
     
     // Set up the initial location
     let initialLocation = CLLocation(latitude: 50.720806, longitude: -1.904755)
-    let regionRadius: CLLocationDistance = 3000
+    let regionRadius: CLLocationDistance = 50000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true) }
@@ -171,26 +172,50 @@ class ViewController: UIViewController {
         annotationOne.imageName = "Union Station"
         mapView.addAnnotation(annotationEighteen)
 
+     
         
-    }
-    
+}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SecondViewController
         vc.annoations = sender as? CustomAnnotation
+        
     }
-    
 }
 
-extension ViewController: MKMapViewDelegate {
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let annotation = view.annotation as? CustomAnnotation else { return }
-        performSegue(withIdentifier: "Next", sender: annotation)
-        mapView.deselectAnnotation(annotation, animated: true)
-    }
-    
-}
-    
+    extension ViewController: MKMapViewDelegate {
+        
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            guard let annotation = view.annotation as? CustomAnnotation else { return }
+            performSegue(withIdentifier: "Next", sender: annotation)
+            mapView.deselectAnnotation(annotation, animated: true)
+            
+            func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+                if !(annotation is MKPointAnnotation) {
+                    return nil
+                }
+                
+                let annotationIdentifier = "AnnotationIdentifier"
+                var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+                
+                if annotationView == nil {
+                    annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+                    annotationView!.canShowCallout = true
+                }
+                else {
+                    annotationView!.annotation = annotation
+                }
+                
+                let pinImage = UIImage(named: "egg")
+                annotationView!.image = pinImage
+                
+                return annotationView
+            }
+            
+        }
+        }
+        
+
+
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion annotationOne: CLRegion) {
@@ -200,7 +225,4 @@ extension ViewController: CLLocationManagerDelegate {
         print("Left: \(annotationOne.identifier) AnnotationOne.")
     }
 }
-
-
-
 

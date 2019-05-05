@@ -49,7 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Egg Finder" id="Maj-GK-wfX"/>
                     <connections>
-                        <outlet property="mapView" destination="PsI-jJ-wSz" id="C3c-8q-Npe"/>
+                        <outlet property="mapView" destination="PsI-jJ-wSz" id="UEB-bi-8GJ"/>
                         <segue destination="e1c-lu-ptX" kind="show" identifier="Next" id="Y4v-SP-Eeq"/>
                     </connections>
                 </viewController>

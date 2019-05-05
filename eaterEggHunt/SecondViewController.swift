@@ -15,26 +15,16 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var eggImage: UIImageView!
     @IBOutlet weak var locationImage: UIImageView!
     
-   // @IBOutlet weak var linkWebiste: UIButton!
-    
 
 override func viewDidLoad() {
     super.viewDidLoad()
-    //    print(annotation.locationLabel!)
-    //    locationInfo.numberOfLines = 0
-    //    //If you set the number of lines to 0, it will allow for as many lines as needed - a text box would probably be better instead of using a label - but serves the same function for this.
-   locationLabel.text = annoations.locationLabel!
-    locationImage.image = UIImage(named: annoations.locationLabel!)
-    ////    filmLabel.text = annotation.filmLabel
-    locationDescription.text = annoations.locationDescription!
+    print(annoations.locationLabel!)
+    locationImage.image = UIImage (named: annoations.locationLabel!)
+    locationLabel.text = annoations.locationLabel
+    locationDescription.text = annoations.locationDescription
     eggImage.image = UIImage(named: annoations.eggType!)
     
-    //}
-    //
-    //
-
-    
-}
+    }
 
     @IBOutlet weak var imageView: UIImageView!
     
