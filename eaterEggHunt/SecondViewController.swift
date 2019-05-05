@@ -10,7 +10,6 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     
     
     @IBOutlet weak var locationDescription: UILabel!
-    
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var eggImage: UIImageView!
     @IBOutlet weak var locationImage: UIImageView!
@@ -18,6 +17,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
 
 override func viewDidLoad() {
     super.viewDidLoad()
+    // Delegates
     print(annoations.locationLabel!)
     locationImage.image = UIImage (named: annoations.locationLabel!)
     locationLabel.text = annoations.locationLabel
@@ -26,6 +26,7 @@ override func viewDidLoad() {
     
     }
 
+    //Camera Function
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func takePicture(_ sender: Any) {
@@ -43,7 +44,7 @@ override func viewDidLoad() {
         self.view.bringSubviewToFront(imageView)
     }
     
-    
+    // Button for websites
     @IBAction func websiteButton(_ sender: Any) {
         openUrl(urlStr: annoations.ticketsButton)
     }

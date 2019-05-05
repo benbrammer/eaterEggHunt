@@ -34,16 +34,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-jJ-wSz">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-jJ-wSz">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="PsI-jJ-wSz" secondAttribute="bottom" id="MEH-Fl-gEh"/>
-                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XyW-OK-55C"/>
-                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qyK-cE-E0R"/>
-                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sQ6-kX-LRG"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9Ci-7M-leF"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tie-rC-Jfb"/>
+                            <constraint firstItem="PsI-jJ-wSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="orD-WC-VE7"/>
+                            <constraint firstAttribute="bottom" secondItem="PsI-jJ-wSz" secondAttribute="bottom" id="uLO-Ee-ebk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

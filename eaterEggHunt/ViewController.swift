@@ -184,11 +184,13 @@ class ViewController: UIViewController {
 
     extension ViewController: MKMapViewDelegate {
         
+        // When annotations are clicked, segue is triggered
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
             guard let annotation = view.annotation as? CustomAnnotation else { return }
             performSegue(withIdentifier: "Next", sender: annotation)
             mapView.deselectAnnotation(annotation, animated: true)
             
+            // Custom annotaions: ISNT WORKING?
             func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
                 if !(annotation is MKPointAnnotation) {
                     return nil

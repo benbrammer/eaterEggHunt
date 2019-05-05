@@ -15,6 +15,7 @@
 		61E6FB3D2254D186005A6C81 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */; };
 		7CF017951CC5BF22C2253005 /* Pods_eaterEggHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C97726105DA32AB4FBDEE6E /* Pods_eaterEggHunt.framework */; };
 		9AD87ED2227ADB2700555315 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD87ED1227ADB2700555315 /* SecondViewController.swift */; };
+		9EA75C31227F33CC00D770E6 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA75C30227F33CC00D770E6 /* CustomAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		6D0E057592B8185BB60E6874 /* Pods-eaterEggHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eaterEggHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eaterEggHunt/Pods-eaterEggHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD87ED1227ADB2700555315 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9EA75C30227F33CC00D770E6 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				61DCE7DD2247D7F400011CB6 /* AppDelegate.swift */,
 				61DCE7DF2247D7F400011CB6 /* ViewController.swift */,
 				61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */,
+				9EA75C30227F33CC00D770E6 /* CustomAnnotationView.swift */,
 				9AD87ED1227ADB2700555315 /* SecondViewController.swift */,
 				61DCE7E12247D7F400011CB6 /* Main.storyboard */,
 				61DCE7E42247D7F500011CB6 /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD87ED2227ADB2700555315 /* SecondViewController.swift in Sources */,
+				9EA75C31227F33CC00D770E6 /* CustomAnnotationView.swift in Sources */,
 				61DCE7E02247D7F400011CB6 /* ViewController.swift in Sources */,
 				61DCE7DE2247D7F400011CB6 /* AppDelegate.swift in Sources */,
 				61E6FB3D2254D186005A6C81 /* CustomAnnotation.swift in Sources */,

@@ -5,6 +5,8 @@ class CustomAnnotationView: MKMarkerAnnotationView {
         willSet {
             guard let custom = newValue as? CustomAnnotation else { return }
             markerTintColor = custom.color
+            
         }
     }
 }
+
