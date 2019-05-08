@@ -204,32 +204,36 @@ class ViewController: UIViewController {
             guard let annotation = view.annotation as? CustomAnnotation else { return }
             performSegue(withIdentifier: "Next", sender: annotation)
             mapView.deselectAnnotation(annotation, animated: true)
+        }
             
-            // Custom annotaions: ISNT WORKING?
-            func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-                if !(annotation is MKPointAnnotation) {
-                    return nil
-                }
-                
-                let annotationIdentifier = "AnnotationIdentifier"
-                var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-                
-                if annotationView == nil {
-                    annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-                    annotationView!.canShowCallout = true
-                }
-                else {
-                    annotationView!.annotation = annotation
-                }
-                
-                let pinImage = UIImage(named: "egg")
-                annotationView!.image = pinImage
-                
-                return annotationView
+        // Custom annotaions: ISNT WORKING?
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if !(annotation is MKPointAnnotation) {
+                return nil
             }
             
+            let annotationIdentifier = "AnnotationIdentifier"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+            
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+                annotationView!.canShowCallout = true
+            }
+            else {
+                annotationView!.annotation = annotation
+            }
+            
+            let pinImage = UIImage(named: "egg.png")
+            annotationView!.image = pinImage
+            
+            return annotationView
         }
-        }
+        
+    
+        
+}
+
+
         
 
 
