@@ -1,5 +1,5 @@
 import Foundation
-
+import Firebase
 import MapKit
 
 class CustomAnnotation: NSObject, MKAnnotation {
@@ -21,12 +21,13 @@ class CustomAnnotation: NSObject, MKAnnotation {
     
     //All variables kept here for the Location View Controller & Custom Annotation
     
-    init(locationLabel: String, coordinate: CLLocationCoordinate2D, locationDescription: String, imageName: String, ticketsButton: String, eggType: String) {
-        self.locationLabel = locationLabel
-        self.coordinate = coordinate
-        self.locationDescription = locationDescription
-        self.ticketsButton = ticketsButton
-        self.imageName = imageName
-        self.eggType = eggType
+    init(document:DocumentSnapshot) {
+        let data = document.data()!
+        let geoPoint = data["coordinates"] as! GeoPoint
+        self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
+    
+  
+        
+    
 }
