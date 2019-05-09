@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     func loadLocations() {
         let ref = Firestore.firestore().collection("locations")
         ref.getDocuments { snapshot, error in
-            print(snapshot!)
+            print(snapshot as Any)
             for document in snapshot!.documents {
                 let annotation = CustomAnnotation(document: document)
                 self.mapView.addAnnotation(annotation)
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 //        mapView.addAnnotation(annotationTwo)
 //
 //        let lonThree = CLLocationCoordinate2D(latitude: 51.518711, longitude: -0.126124)
-//        let annotationThree = CustomAnnotation(locationLabel: "The British Museum", coordinate: lonThree, locationDescription: "Founded in 1753, The British Museum, in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely sourced during the era of the British Empire.", imageName: "The British Museum", ticketsButton: "https://www.britishmuseum.org/visiting.aspx", eggType: "egg")
+//        let annotationThree = CustomAnnotation(locationLabel: "The British Museum", coordinate: lonThree, locationDescription: "Founded in 1753, The British Museum, in,∫ the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely sourced during the era of the British Empire.", imageName: "The British Museum", ticketsButton: "https://www.britishmuseum.org/visiting.aspx", eggType: "egg")
 //        let lonThreeRegion = CLCircularRegion(center: lonThree, radius: 300, identifier: "The British Museum")
 //        locationManager.startMonitoring(for: lonThreeRegion)
 //        annotationOne.imageName = "The British Museum"
