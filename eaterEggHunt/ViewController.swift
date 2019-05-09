@@ -3,8 +3,8 @@ import MapKit
 import Firebase
 
 class ViewController: UIViewController {
+    
     let locationManager = CLLocationManager()
-
 
     @IBOutlet weak var mapView: MKMapView!
     

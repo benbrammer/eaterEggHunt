@@ -23,7 +23,6 @@ override func viewDidLoad() {
     locationLabel.text = annotaions.locationLabel
     locationDescription.text = annotaions.locationDescription
     eggImage.image = UIImage(named: annotaions.eggType!)
-    
     }
 
     //Camera Function
