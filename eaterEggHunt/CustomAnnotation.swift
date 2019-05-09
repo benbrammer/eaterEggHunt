@@ -23,6 +23,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
     
     init(document:DocumentSnapshot) {
         let data = document.data()!
+        let locationLabel = data["name"] as! GeoPoint
         let geoPoint = data["coordinates"] as! GeoPoint
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
