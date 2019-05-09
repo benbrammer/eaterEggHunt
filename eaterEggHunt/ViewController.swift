@@ -192,7 +192,7 @@ class ViewController: UIViewController {
 }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SecondViewController
-        vc.annoations = sender as? CustomAnnotation
+        vc.annotaions = sender as? CustomAnnotation
         
     }
 }

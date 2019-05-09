@@ -5,7 +5,7 @@ import UIKit
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
-    var annoations: CustomAnnotation!
+    var annotaions: CustomAnnotation!
     var imagePicker: UIImagePickerController!
     
     
@@ -18,11 +18,11 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
 override func viewDidLoad() {
     super.viewDidLoad()
     // Delegates
-    print(annoations.locationLabel!)
-    locationImage.image = UIImage (named: annoations.locationLabel!)
-    locationLabel.text = annoations.locationLabel
-    locationDescription.text = annoations.locationDescription
-    eggImage.image = UIImage(named: annoations.eggType!)
+    print(annotaions.locationLabel!)
+    locationImage.image = UIImage (named: annotaions.locationLabel!)
+    locationLabel.text = annotaions.locationLabel
+    locationDescription.text = annotaions.locationDescription
+    eggImage.image = UIImage(named: annotaions.eggType!)
     
     }
 
@@ -46,7 +46,7 @@ override func viewDidLoad() {
     
     // Button for websites
     @IBAction func websiteButton(_ sender: Any) {
-        openUrl(urlStr: annoations.ticketsButton)
+        openUrl(urlStr: annotaions.ticketsButton)
     }
     func openUrl(urlStr:String!) {
         if let url = URL(string:urlStr) {
