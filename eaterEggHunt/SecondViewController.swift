@@ -55,7 +55,7 @@ override func viewDidLoad() {
         openUrl(urlStr: annotaions.ticketsButton)
     }
     func openUrl(urlStr:String!) {
-        if let url = URL(string:urlStr) {
+        if let url = URL(string:urlStr) { 
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
