@@ -27,7 +27,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
         let geoPoint = data["coordinates"] as! GeoPoint
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
-    
   
         
     
