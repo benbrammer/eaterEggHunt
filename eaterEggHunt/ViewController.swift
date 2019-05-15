@@ -236,10 +236,6 @@ class ViewController: UIViewController {
         
 }
 
-
-        
-
-
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion annotationOne: CLRegion) {
