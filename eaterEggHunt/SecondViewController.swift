@@ -13,10 +13,27 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var eggImage: UIImageView!
     @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var eggButton: UIButton!
     
-
+    //score
+    var score = 0
+   
+    
+    @IBAction func eggButtonAction(_ sender: UIButton) {
+        score += 1
+        scoreLabel.text = NSString (format: "score : %i", score) as String
+        
+    }
+    
 override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let confettiView = ConffetiView()
+    self.view.addSubView(confettiView)
+    //score
+    
     // Delegates
     print(annotaions.locationLabel!)
     locationImage.image = UIImage (named: annotaions.locationLabel!)
@@ -44,8 +61,6 @@ override func viewDidLoad() {
     
     
     // Button to add score +1 when clicked
-    @IBAction func eggScore(_ sender: Any) {
-    }
     
     
     
@@ -55,7 +70,7 @@ override func viewDidLoad() {
         openUrl(urlStr: annotaions.ticketsButton)
     }
     func openUrl(urlStr:String!) {
-        if let url = URL(string:urlStr) {
+        if let url = URL(string:urlStr) { 
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
