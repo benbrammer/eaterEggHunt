@@ -2,6 +2,7 @@
 import Foundation
 import UIKit
 
+
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
@@ -32,6 +33,7 @@ override func viewDidLoad() {
     
     let confettiView = ConffetiView()
     self.view.addSubView(confettiView)
+    
     //score
     
     // Delegates
