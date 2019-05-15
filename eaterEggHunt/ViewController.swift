@@ -5,7 +5,8 @@ import Firebase
 class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
-
+    let annotationIdentifier = "AnnotationIdentifier"
+    
     @IBOutlet weak var mapView: MKMapView!
     
     // Set up the initial location
@@ -41,10 +42,17 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+        var pointAnnotation: CustomAnnotationView!
+        var pinAnnotationView: MKPinAnnotationView!
+        pointAnnotation = CustomAnnotationView()
+        pointAnnotation.pinCustomImageName = "egg"
         locationManager.startUpdatingLocation()
         loadLocations()
         
+        pinAnnotationView = MKPinAnnotationView(annotation: MKAnnotationView, reuseIdentifier: "AnnotationIdentifier")
+        mapView.addAnnotation(pinAnnotationView.annotation!)
         
+        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
         //London
 //        let lonOne = CLLocationCoordinate2D(latitude: 51.500717, longitude: -0.124630)
 //        let annotationOne = CustomAnnotation(locationLabel: "Big Ben", coordinate: lonOne, locationDescription: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London and is usually extended to refer to both the clock and the clock tower. The tower stands at 96 metres tall. Opened: 31 May 1859", imageName: "Big Ben", ticketsButton: "https:www.getyourguide.com/big-ben-l2709/?utm_force=0", eggType: "egg")
@@ -191,6 +199,14 @@ class ViewController: UIViewController {
 //        annotationOne.imageName = "Union Station"
 //        mapView.addAnnotation(annotationEighteen)
 
+        
+        
+
+    
+        
+        
+        
+        
      
 }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -204,34 +220,34 @@ class ViewController: UIViewController {
         
         // When annotations are clicked, segue is triggered
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            print(view as! CustomAnnotationView)
             guard let annotation = view.annotation as? CustomAnnotation else { return }
             performSegue(withIdentifier: "Next", sender: annotation)
             mapView.deselectAnnotation(annotation, animated: true)
         }
-            
-        // Custom annotaions: ISNT WORKING?
+        
+        
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            if !(annotation is MKPointAnnotation) {
-                return nil
-            }
-            
+    
             let annotationIdentifier = "AnnotationIdentifier"
+            
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
             
             if annotationView == nil {
-                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+                annotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+                annotationView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
                 annotationView!.canShowCallout = true
             }
             else {
                 annotationView!.annotation = annotation
             }
             
-            let pinImage = UIImage(named: "egg")
-            annotationView!.image = pinImage
+            let customPointAnnotation = annotation as! CustomAnnotationView
+            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
             
             return annotationView
+            
         }
-        
     
         
 }
