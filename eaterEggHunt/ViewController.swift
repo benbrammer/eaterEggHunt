@@ -226,7 +226,7 @@ class ViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-            let pinImage = UIImage(named: "egg.png")
+            let pinImage = UIImage(named: "egg")
             annotationView!.image = pinImage
             
             return annotationView

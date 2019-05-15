@@ -24,10 +24,15 @@ class CustomAnnotation: NSObject, MKAnnotation {
         let data = document.data()!
         
         guard let name = data["Name"] as? String,
+            let description = data["Description"] as? String,
+            let website = data["ticketsButton"] as? String,
             let geoPoint = data["Coordinates"] as? GeoPoint else { return nil }
+        
         
         eggRegion = ""
         self.locationLabel = name
+        self.locationDescription = description
+        self.ticketsButton = website
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
   
