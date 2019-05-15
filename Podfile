@@ -7,5 +7,7 @@ target 'eaterEggHunt' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
+pod "ConfettiView"
+
 
 end
