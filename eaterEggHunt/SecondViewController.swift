@@ -22,7 +22,6 @@ override func viewDidLoad() {
     locationImage.image = UIImage (named: annotaions.locationLabel!)
     locationLabel.text = annotaions.locationLabel
     locationDescription.text = annotaions.locationDescription
-    eggImage.image = UIImage(named: annotaions.eggType!)
     }
 
     //Camera Function
@@ -42,6 +41,14 @@ override func viewDidLoad() {
         // brings the set image foward
         self.view.bringSubviewToFront(imageView)
     }
+    
+    
+    // Button to add score +1 when clicked
+    @IBAction func eggScore(_ sender: Any) {
+    }
+    
+    
+    
     
     // Button for websites
     @IBAction func websiteButton(_ sender: Any) {

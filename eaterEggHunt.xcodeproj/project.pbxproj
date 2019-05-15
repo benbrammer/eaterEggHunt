@@ -79,9 +79,9 @@
 			children = (
 				61DCE7DD2247D7F400011CB6 /* AppDelegate.swift */,
 				61DCE7DF2247D7F400011CB6 /* ViewController.swift */,
+				9AD87ED1227ADB2700555315 /* SecondViewController.swift */,
 				61E6FB3C2254D186005A6C81 /* CustomAnnotation.swift */,
 				9EA75C30227F33CC00D770E6 /* CustomAnnotationView.swift */,
-				9AD87ED1227ADB2700555315 /* SecondViewController.swift */,
 				61DCE7E12247D7F400011CB6 /* Main.storyboard */,
 				61DCE7E42247D7F500011CB6 /* Assets.xcassets */,
 				61DCE7E62247D7F500011CB6 /* LaunchScreen.storyboard */,
