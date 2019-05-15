@@ -31,7 +31,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
         self.locationLabel = name
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
-    
   
         
     
