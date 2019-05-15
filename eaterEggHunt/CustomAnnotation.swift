@@ -8,8 +8,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
     var locationLabel: String?
     var locationImage: UIImage?
     var locationDescription: String?
-    var eggType: String?
-    var eggs: UIImage?
+    var eggRegion: String?
     var imageName: String?
     var color: UIColor!
     var annotationView: String?
@@ -27,7 +26,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
         guard let name = data["Name"] as? String,
             let geoPoint = data["Coordinates"] as? GeoPoint else { return nil }
         
-        eggType = ""
+        eggRegion = ""
         self.locationLabel = name
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
