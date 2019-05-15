@@ -26,6 +26,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
         
         guard let name = data["Name"] as? String,
             let geoPoint = data["Coordinates"] as? GeoPoint else { return nil }
+            
         
         eggType = ""
         self.locationLabel = name
