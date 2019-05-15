@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NUJ-we-90U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NUJ-we-90U">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -124,20 +124,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="egg"/>
                                 <connections>
-                                    <action selector="eggScore:" destination="e1c-lu-ptX" eventType="touchUpInside" id="NQ3-QJ-ouN"/>
+                                    <action selector="eggButtonAction:" destination="e1c-lu-ptX" eventType="touchUpInside" id="e2d-Cv-IiM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5z-or-dgN">
+                                <rect key="frame" x="5" y="309" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="27r-Xa-LJf"/>
                     </view>
                     <navigationItem key="navigationItem" title=" " id="2zL-aO-aBq"/>
                     <connections>
+                        <outlet property="eggButton" destination="KAX-zW-daS" id="tIu-RD-Jne"/>
                         <outlet property="eggImage" destination="2bC-1t-DrQ" id="nhH-EX-zrB"/>
                         <outlet property="imageView" destination="eNH-x4-K2W" id="6s0-JH-Wfm"/>
                         <outlet property="locationDescription" destination="ZbQ-xS-Y1Q" id="Jul-HO-S1u"/>
                         <outlet property="locationImage" destination="JOA-xU-55J" id="BTu-Sg-p3O"/>
                         <outlet property="locationLabel" destination="ByC-tL-OpQ" id="WR0-B0-94s"/>
+                        <outlet property="scoreLabel" destination="j5z-or-dgN" id="lIb-ii-03S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qq1-5P-3JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
