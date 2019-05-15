@@ -18,6 +18,8 @@ class CustomAnnotation: NSObject, MKAnnotation {
         return locationLabel
     }
     
+    var distanceToUser: CLLocationDistance!
+    
     //All variables kept here for the Location View Controller & Custom Annotation
     
     init?(document:DocumentSnapshot) {
