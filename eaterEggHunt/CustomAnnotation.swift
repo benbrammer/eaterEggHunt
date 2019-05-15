@@ -27,6 +27,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
             let description = data["Description"] as? String,
             let website = data["ticketsButton"] as? String,
             let geoPoint = data["Coordinates"] as? GeoPoint else { return nil }
+            
         
         
         eggRegion = ""
