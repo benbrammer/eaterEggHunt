@@ -21,10 +21,14 @@ class CustomAnnotation: NSObject, MKAnnotation {
     
     //All variables kept here for the Location View Controller & Custom Annotation
     
-    init(document:DocumentSnapshot) {
+    init?(document:DocumentSnapshot) {
         let data = document.data()!
-        let locationLabel = data["name"] as! GeoPoint
-        let geoPoint = data["coordinates"] as! GeoPoint
+        
+        guard let name = data["Name"] as? String,
+            let geoPoint = data["Coordinates"] as? GeoPoint else { return nil }
+        
+        eggType = ""
+        self.locationLabel = name
         self.coordinate = CLLocationCoordinate2D(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
     }
     

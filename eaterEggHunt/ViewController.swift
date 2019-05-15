@@ -20,12 +20,15 @@ class ViewController: UIViewController {
     func loadLocations() {
         let ref = Firestore.firestore().collection("locations")
         ref.getDocuments { snapshot, error in
-            print(snapshot as Any)
+            
             for document in snapshot!.documents {
-                let annotation = CustomAnnotation(document: document)
-                self.mapView.addAnnotation(annotation)
-                print(annotation)
+              
+                if let annotation = CustomAnnotation(document: document) {
+                    print(annotation)
+                    self.mapView.addAnnotation(annotation)
+                }
             }
+            self.mapView.showAnnotations(self.mapView.annotations, animated: false)
         }
     }
     
