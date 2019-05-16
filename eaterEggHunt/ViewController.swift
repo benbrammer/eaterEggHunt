@@ -55,18 +55,14 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
-        var pointAnnotation: CustomAnnotationView!
-        var pinAnnotationView: MKPinAnnotationView!
-        pointAnnotation = CustomAnnotationView()
-        pointAnnotation.pinCustomImageName = "EasterE"
+//        var pointAnnotation: CustomAnnotationView!
+//        var pinAnnotationView: MKPinAnnotationView!
+//        pointAnnotation = CustomAnnotationView()
+//        pointAnnotation.pinCustomImageName = "egg"
         locationManager.startUpdatingLocation()
 
         loadLocations()
-        
-        pinAnnotationView = MKPinAnnotationView(annotation: MKAnnotationView, reuseIdentifier: "AnnotationIdentifier")
-        mapView.addAnnotation(pinAnnotationView.annotation!)
-        
-        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
+//        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
 
      
 }
@@ -103,8 +99,8 @@ class ViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-            let customPointAnnotation = annotation as! CustomAnnotationView
-            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
+//            let customPointAnnotation = annotation as! CustomAnnotationView
+//            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
             
             return annotationView
             
