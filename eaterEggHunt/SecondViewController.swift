@@ -30,8 +30,6 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
 override func viewDidLoad() {
     super.viewDidLoad()
     
-    let confettiView = ConffetiView()
-    self.view.addSubView(confettiView)
     //score
     
     // Delegates
