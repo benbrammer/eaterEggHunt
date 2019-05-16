@@ -2,14 +2,11 @@
 import Foundation
 import UIKit
 
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
@@ -38,10 +35,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
 override func viewDidLoad() {
     super.viewDidLoad()
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
+
     //score
     
     // Delegates

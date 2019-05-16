@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             
             for document in snapshot!.documents {
                 if let annotation = CustomAnnotation(document: document) {
-//                    annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
+              annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
                     self.mapView.addAnnotation(annotation)
                 }
                 
@@ -37,22 +37,6 @@ class ViewController: UIViewController {
         
     }
 
-//    func loadLocations() {
-//        let ref = Firestore.firestore().collection("locations")
-//        ref.getDocuments { snapshot, error in
-//
-//            for document in snapshot!.documents {
-//
-//                if let annotation = CustomAnnotation(document: document) {
-//                    annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
-//                    self.mapView.addAnnotation(annotation)
-//                }
-//
-//            }
-//            self.figureOutClosest()
-//        }
-
-//    }
     
     //compares two values ($) to find the closest.
     func figureOutClosest() {
@@ -72,11 +56,9 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+        var pointAnnotation: CustomAnnotationView!
+        var pinAnnotationView: MKPinAnnotationView!
 
-//        var pointAnnotation: CustomAnnotationView!
-//        var pinAnnotationView: MKPinAnnotationView!
-//        pointAnnotation = CustomAnnotationView()
-//        pointAnnotation.pinCustomImageName = "egg"
 
         locationManager.startUpdatingLocation()
 
@@ -122,7 +104,7 @@ class ViewController: UIViewController {
             
 
             let pinAnnotation = annotation as! CustomAnnotation
-            annotationView?.image = UIImage(named: "EasterE")
+            annotationView?.image = UIImage(named: "egg")
 
             return annotationView
             
@@ -138,7 +120,7 @@ extension ViewController: CLLocationManagerDelegate {
         if !initialLoad {
             initialLoad = true
             initialLocation = location
-//            loadLocations()
+//          loadLocations()
         }
         
         
