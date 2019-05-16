@@ -1,7 +1,7 @@
 //second view controller will pop up when egg is found
 import Foundation
 import UIKit
-
+import ConfettiView
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
@@ -32,6 +32,9 @@ override func viewDidLoad() {
     
     let confettiView = ConffetiView()
     self.view.addSubView(confettiView)
+    confettiView.stopAnimating()
+    confettiView.startAnimating()
+    
     //score
     
     // Delegates
