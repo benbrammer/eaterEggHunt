@@ -25,9 +25,8 @@ class ViewController: UIViewController {
         ref.getDocuments { snapshot, error in
             
             for document in snapshot!.documents {
-              
                 if let annotation = CustomAnnotation(document: document) {
-                    annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
+//                    annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
                     self.mapView.addAnnotation(annotation)
                 }
                 
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
     func figureOutClosest() {
         var annotations = mapView.annotations as! [CustomAnnotation]
         print(annotations)
-        annotations.sort { return $0.distanceToUser < $1.distanceToUser }
+//        annotations.sort { return $0.distanceToUser < $1.distanceToUser }
         let closestAnnotation = annotations.first!
         
     }
@@ -62,9 +61,6 @@ class ViewController: UIViewController {
         locationManager.startUpdatingLocation()
 
         loadLocations()
-        
-        pinAnnotationView = MKPinAnnotationView(annotation: MKAnnotationView, reuseIdentifier: "AnnotationIdentifier")
-        mapView.addAnnotation(pinAnnotationView.annotation!)
         
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
 
@@ -103,8 +99,8 @@ class ViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-            let customPointAnnotation = annotation as! CustomAnnotationView
-            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
+            let pinAnnotation = annotation as! CustomAnnotation
+            annotationView?.image = UIImage(named: "EasterE")
             
             return annotationView
             
