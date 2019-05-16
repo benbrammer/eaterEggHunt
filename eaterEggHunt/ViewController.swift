@@ -55,6 +55,13 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+<<<<<<< HEAD
+=======
+        var pointAnnotation: CustomAnnotationView!
+        var pinAnnotationView: MKPinAnnotationView!
+        pointAnnotation = CustomAnnotationView()
+        pointAnnotation.pinCustomImageName = "egg"
+>>>>>>> parent of 45bbec9... .
         locationManager.startUpdatingLocation()
 
 //        loadLocations()
