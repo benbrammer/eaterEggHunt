@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
     }
     
+<<<<<<< HEAD
     func loadLocations() {
         let ref = Firestore.firestore().collection("locations")
         ref.getDocuments { snapshot, error in
@@ -35,8 +36,26 @@ class ViewController: UIViewController {
         }
         
     }
+=======
+//    func loadLocations() {
+//        let ref = Firestore.firestore().collection("locations")
+//        ref.getDocuments { snapshot, error in
+//
+//            for document in snapshot!.documents {
+//
+//                if let annotation = CustomAnnotation(document: document) {
+//                    annotation.distanceToUser = self.initialLocation!.distance(from: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude) )
+//                    self.mapView.addAnnotation(annotation)
+//                }
+//
+//            }
+//            self.figureOutClosest()
+//        }
+>>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
     
+//    }
     
+    //compares two values ($) to find the closest.
     func figureOutClosest() {
         var annotations = mapView.annotations as! [CustomAnnotation]
         print(annotations)
@@ -54,14 +73,24 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+<<<<<<< HEAD
+=======
         var pointAnnotation: CustomAnnotationView!
         var pinAnnotationView: MKPinAnnotationView!
         pointAnnotation = CustomAnnotationView()
         pointAnnotation.pinCustomImageName = "egg"
+<<<<<<< HEAD
+>>>>>>> parent of 45bbec9... .
+=======
+>>>>>>> parent of 45bbec9... .
         locationManager.startUpdatingLocation()
 
-        loadLocations()
+//        loadLocations()
         
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
 
      
@@ -99,8 +128,12 @@ class ViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
+<<<<<<< HEAD
             let pinAnnotation = annotation as! CustomAnnotation
             annotationView?.image = UIImage(named: "EasterE")
+=======
+
+>>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
             
             return annotationView
             
@@ -110,13 +143,13 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate {
     
-
+//so it always loads, viewing one of the location clusters
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         if !initialLoad {
             initialLoad = true
             initialLocation = location
-            loadLocations()
+//            loadLocations()
         }
         
         

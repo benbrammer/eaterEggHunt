@@ -7,7 +7,15 @@
 		<key>eaterEggHunt.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<integer>0</integer>
+=======
 			<integer>18</integer>
+>>>>>>> parent of 45bbec9... .
+=======
+			<integer>18</integer>
+>>>>>>> parent of 45bbec9... .
 		</dict>
 	</dict>
 </dict>
