@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         var pointAnnotation: CustomAnnotationView!
         var pinAnnotationView: MKPinAnnotationView!
         pointAnnotation = CustomAnnotationView()
-        pointAnnotation.pinCustomImageName = "egg"
+        pointAnnotation.pinCustomImageName = "EasterE"
         locationManager.startUpdatingLocation()
 
         loadLocations()
