@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //        var pointAnnotation: CustomAnnotationView!
 //        var pinAnnotationView: MKPinAnnotationView!
 //        pointAnnotation = CustomAnnotationView()
@@ -66,6 +67,8 @@ class ViewController: UIViewController {
 //        mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
 
 =======
+=======
+>>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
 =======
 >>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
         locationManager.startUpdatingLocation()
@@ -219,6 +222,9 @@ class ViewController: UIViewController {
 //        mapView.addAnnotation(annotationEighteen)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
+=======
 >>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
 =======
 >>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
@@ -259,6 +265,7 @@ class ViewController: UIViewController {
             
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //            let customPointAnnotation = annotation as! CustomAnnotationView
 //            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
 =======
@@ -271,6 +278,13 @@ class ViewController: UIViewController {
 <<<<<<< HEAD
      
 =======
+=======
+            let pinImage = UIImage(named: "egg")
+            annotationView!.image = pinImage
+            
+            return annotationView
+        }
+>>>>>>> parent of 0dbf890... Almost Finished Custom Annotations
 =======
             let pinImage = UIImage(named: "egg")
             annotationView!.image = pinImage
