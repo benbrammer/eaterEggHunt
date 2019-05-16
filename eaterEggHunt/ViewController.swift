@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
     }
     
-<<<<<<< HEAD
+
     func loadLocations() {
         let ref = Firestore.firestore().collection("locations")
         ref.getDocuments { snapshot, error in
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         }
         
     }
-=======
+
 //    func loadLocations() {
 //        let ref = Firestore.firestore().collection("locations")
 //        ref.getDocuments { snapshot, error in
@@ -51,8 +51,7 @@ class ViewController: UIViewController {
 //            }
 //            self.figureOutClosest()
 //        }
->>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
-    
+
 //    }
     
     //compares two values ($) to find the closest.
@@ -73,24 +72,17 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
-<<<<<<< HEAD
-=======
-        var pointAnnotation: CustomAnnotationView!
-        var pinAnnotationView: MKPinAnnotationView!
-        pointAnnotation = CustomAnnotationView()
-        pointAnnotation.pinCustomImageName = "egg"
-<<<<<<< HEAD
->>>>>>> parent of 45bbec9... .
-=======
->>>>>>> parent of 45bbec9... .
+
+//        var pointAnnotation: CustomAnnotationView!
+//        var pinAnnotationView: MKPinAnnotationView!
+//        pointAnnotation = CustomAnnotationView()
+//        pointAnnotation.pinCustomImageName = "egg"
+
         locationManager.startUpdatingLocation()
 
 //        loadLocations()
         
-<<<<<<< HEAD
-=======
-        
->>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
+
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotationIdentifier)
 
      
@@ -128,13 +120,10 @@ class ViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-<<<<<<< HEAD
+
             let pinAnnotation = annotation as! CustomAnnotation
             annotationView?.image = UIImage(named: "EasterE")
-=======
 
->>>>>>> 1a1649cd424dad993c8786e8ae68c54de1cae383
-            
             return annotationView
             
         }
