@@ -61,6 +61,9 @@ class ViewController: UIViewController {
         var pinAnnotationView: MKPinAnnotationView!
         pointAnnotation = CustomAnnotationView()
         pointAnnotation.pinCustomImageName = "egg"
+<<<<<<< HEAD
+>>>>>>> parent of 45bbec9... .
+=======
 >>>>>>> parent of 45bbec9... .
         locationManager.startUpdatingLocation()
 
